@@ -1,0 +1,62 @@
+{
+    "brand": {
+        "brandName": "Maruti",
+        "model": [
+            {
+                "modelName": "Alto 800 ",
+                "variant": [
+                    {
+                        "variantName": "STD Opt",
+                        "price": 3.39,
+                        "year": 2021,
+                        "serviceCost": {
+                            "year": 2,
+                            "price": 2000
+                        },
+                        "engineType": "F8D Petrol Engine",
+                        "displacement": 796,
+                        "numberOfCylinder": 3,
+                        "gearBox": "5 Speed",
+                        "fuelType": "Petrol",
+                        "kilometers": 220,
+                        "details": "Should you buy Maruti Alto 800 or Honda Amaze? Find out which car is best for you - compare the two models on the basis of their Price, Size, Space, Boot Space, Service cost, Mileage, Features, Colours and other specs.",
+                        "photoUrl": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Maruti/Alto-800/7072/1650542631570/front-left-side-47.jpg?imwidth=380&impolicy=resize",
+                        "reviews": [
+                            {
+                                "rating": 5,
+                                "message": "Awesome Car "
+                            }
+                        ]
+                    },
+                    {
+                        "variantName": "STD Opt 2",
+                        "price": 4.39,
+                        "year": 2021,
+                        "serviceCost": {
+                            "year": 2,
+                            "price": 3000
+                        },
+                        "engineType": "F8D Petrol Engine",
+                        "displacement": 800,
+                        "numberOfCylinder": 6,
+                        "gearBox": "7 Speed",
+                        "fuelType": "Petrol",
+                        "kilometers": 260,
+                        "details": "Should you buy Maruti Alto 800 or Honda Amaze? Find out which car is best for you - compare the two models on the basis of their Price, Size, Space, Boot Space, Service cost, Mileage, Features, Colours and other specs.",
+                        "photoUrl": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Maruti/Alto-800/7072/1650542631570/front-left-side-47.jpg?imwidth=380&impolicy=resize",
+                        "reviews": [
+                            {
+                                "rating": 5,
+                                "message": "Awesome Car "
+                            },
+                            {
+                                "rating": 5,
+                                "message": "Awesome Car "
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    }
+}
