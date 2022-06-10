@@ -1,20 +1,18 @@
 import { NextApiRequest, NextApiResponse } from 'next';
 import DBConnect from 'server/database';
-import Car from 'server/model/Car';
+import Variant from 'server/model/Variant';
 
-const carHandler = async (req: NextApiRequest, res: NextApiResponse) => {
+const carVariantHandler = async (req: NextApiRequest, res: NextApiResponse) => {
     await DBConnect();
-
-    const { method, body } = req;
+    const { body, method } = req;
 
     if (method === 'POST') {
         try {
-            console.log({ Yes: 'request worked' });
-            const car = await Car.create(body);
+            const model = await Variant.create(body);
             res.status(201).json({
                 success: true,
-                data: car,
-                message: 'Car created successfully',
+                data: model,
+                message: 'Car model created successfully',
             });
         } catch (error) {
             const { message } = error as Error;
@@ -26,15 +24,15 @@ const carHandler = async (req: NextApiRequest, res: NextApiResponse) => {
         }
     } else if (method === 'GET') {
         try {
-            const cars = await Car.find({});
+            const variant = await Variant.find({});
             res.status(200).json({
                 success: true,
-                data: cars,
+                data: variant,
                 message: '',
             });
         } catch (error) {
             const { message } = error as Error;
-            res.status(200).json({
+            res.status(400).json({
                 success: false,
                 data: null,
                 message,
@@ -42,5 +40,4 @@ const carHandler = async (req: NextApiRequest, res: NextApiResponse) => {
         }
     }
 };
-
-export default carHandler;
+export default carVariantHandler;
