@@ -17,5 +17,5 @@ const brandSchema = new Schema<ICarBrand>(
 // } catch (error) {
 //     Brand = model<ICarBrand>('brand', brandSchema);
 // }
-const Brand = models.Car || model<ICarBrand>('brand', brandSchema);
+const Brand = models.Brand || model<ICarBrand>('Brand', brandSchema);
 export default Brand;

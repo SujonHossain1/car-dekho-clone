@@ -1,21 +1,26 @@
 import axios from 'axios';
 import { GetServerSideProps, NextPage } from 'next';
 import { useState } from 'react';
+import { ICarBrand } from 'server/interface';
 
-interface IProps {
+interface IBrand {
     success: boolean;
-    data: ICar[] | null;
-    message: string;
+    data: ICarBrand[],
+    message: string
+}
+interface IProps {
+    brands: ICarBrand[]
 }
 
-const CompareCar: NextPage<IProps> = ({ success, data, message }) => {
+const CompareCar: NextPage<IProps> = ({ brands }) => {
     const [isDropdownOpen, setIsDropdownOpen] = useState(false);
     const [tab, setTab] = useState('brand');
     const [search, setSearch] = useState('');
 
-    console.log({ data });
+    console.log({ brands });
     return (
         <div className="container bg-white py-5">
+            <pre> {JSON.stringify(brands, null, 4)} </pre>
             <div className="row">
                 <div className="col-md-3">
                     <div className="compare-item">
@@ -83,20 +88,20 @@ const CompareCar: NextPage<IProps> = ({ success, data, message }) => {
                     </div>
                 </div>
             </div>
-            <pre>{JSON.stringify(data, null, 4)}</pre>
+            {/* <pre>{JSON.stringify(data, null, 4)}</pre> */}
         </div>
     );
 };
 
 export const getServerSideProps: GetServerSideProps<IProps> = async (ctx) => {
     try {
-        const { data } = await axios.get<IProps>(
-            `http://localhost:3000/api/cars/`
+        const { data } = await axios.get<IBrand>(
+            `http://localhost:3000/api/cars/brand`
         );
 
         return {
             props: {
-                ...data,
+                brands: data.data
             },
         };
     } catch (error: any) {

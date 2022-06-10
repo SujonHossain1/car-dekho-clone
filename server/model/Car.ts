@@ -10,7 +10,7 @@ const carSchema = new Schema<ICar>(
             },
             brandName: {
                 type: String,
-                // required: true,
+                required: true,
             },
         },
         model: {
@@ -65,6 +65,7 @@ const carSchema = new Schema<ICar>(
 //     Car = model<ICar>('car', carSchema);
 // }
 
-const Car = models.Car || model<ICar>('car', carSchema);
+const Car = models.Car || model<ICar>('Car', carSchema);
 
+// const Car = models.Car ? models.Car : model<ICar>('car', carSchema);
 export default Car;

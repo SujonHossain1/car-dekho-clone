@@ -22,6 +22,6 @@ const modelSchema = new Schema<ICarModel>(
 //     CModel = model<ICarModel>('model', modelSchema);
 // }
 
-const Model = models.Model || model<ICarModel>('model', modelSchema);
+const Model = models.Model || model<ICarModel>('Model', modelSchema);
 
 export default Model;

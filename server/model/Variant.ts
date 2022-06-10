@@ -22,6 +22,6 @@ const variantSchema = new Schema<IVariant>(
 //     Variant = model<IVariant>('variant', variantSchema);
 // }
 
-const Variant = models.Variant || model<IVariant>('variant', variantSchema);
+const Variant = models.Variant || model<IVariant>('Variant', variantSchema);
 
 export default Variant;
