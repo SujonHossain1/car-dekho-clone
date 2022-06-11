@@ -9,18 +9,11 @@ const modelSchema = new Schema<ICarModel>(
         },
         brand: {
             type: Schema.Types.ObjectId,
-            ref: 'brand',
+            ref: 'Brand',
         },
     },
     { timestamps: true }
 );
-
-// let CModel: Model<ICarModel>;
-// try {
-//     CModel = model<ICarModel>('model');
-// } catch (error) {
-//     CModel = model<ICarModel>('model', modelSchema);
-// }
 
 const Model = models.Model || model<ICarModel>('Model', modelSchema);
 

@@ -54,36 +54,40 @@ const CompareCar: NextPage<IProps> = ({ brands }) => {
                                 onFocus={() => setIsDropdownOpen(true)}
                                 onBlur={() => setIsDropdownOpen(false)}
                             />
-                            {/* {isDropdownOpen && (
+                            {isDropdownOpen && (
                                 <div className="compare-item-search-dropdown">
-                                    {tab === "brand" && data?.map((car) => (
-                                        <div
-                                            className="compare-item-search-dropdown-item"
-                                            key={car._id}
-                                        >
-                                            <div className="compare-item-search-dropdown-item-title mb-3">
-                                                Popular Brands
-                                            </div>
-                                            <div className="compare-item-search-dropdown-item-title">
-                                                {car.brand.brandName}
-                                            </div>
 
-                                            <ul>
-                                                {car.brand.model.map(
+                                    <div
+                                        className="compare-item-search-dropdown-item"
+                                    >
+
+                                        <div className="compare-item-search-dropdown-item-title mb-3">
+                                            Popular Brands
+                                        </div>
+                                        {tab === "brand" && brands?.map((brand) => (
+                                            <>
+                                                <div className="compare-item-search-dropdown-item-title">
+                                                    {brand.brandName}
+                                                </div>
+
+                                                <ul>
+                                                    {/* {car.brand.model.map(
                                                     (carModel) => (
                                                         <li key={carModel.modelName} >
                                                             {carModel.modelName}
                                                         </li>
                                                     )
-                                                )}
-                                            </ul>
-                                        </div>
-                                    ))}
+                                                )} */}
+                                                </ul>
+                                            </>
+                                        ))}
+                                    </div>
+
                                     <div className="compare-item-search-dropdown-variant-item">
 
                                     </div>
                                 </div>
-                            )} */}
+                            )}
                         </div>
                     </div>
                 </div>

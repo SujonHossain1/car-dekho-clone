@@ -6,7 +6,7 @@ const carSchema = new Schema<ICar>(
         brand: {
             _id: {
                 type: Schema.Types.ObjectId,
-                ref: 'model',
+                ref: 'Brand',
             },
             brandName: {
                 type: String,
@@ -16,7 +16,7 @@ const carSchema = new Schema<ICar>(
         model: {
             _id: {
                 type: Schema.Types.ObjectId,
-                ref: 'model',
+                ref: 'Model',
             },
             modelName: {
                 type: String,
@@ -26,7 +26,7 @@ const carSchema = new Schema<ICar>(
         variant: {
             _id: {
                 type: Schema.Types.ObjectId,
-                ref: 'variant',
+                ref: 'Variant',
             },
             variantName: {
                 type: String,

@@ -9,18 +9,11 @@ const variantSchema = new Schema<IVariant>(
         },
         model: {
             type: Schema.Types.ObjectId,
-            ref: 'model',
+            ref: 'Model',
         },
     },
     { timestamps: true }
 );
-
-// let Variant: Model<IVariant>;
-// try {
-//     Variant = model<IVariant>('variant');
-// } catch (error) {
-//     Variant = model<IVariant>('variant', variantSchema);
-// }
 
 const Variant = models.Variant || model<IVariant>('Variant', variantSchema);
 
