@@ -1,4 +1,5 @@
 import { NextPage } from 'next';
+import { Fragment } from 'react';
 import { IBrandItem, ICarModel } from 'server/interface';
 
 interface IProps {
@@ -13,11 +14,8 @@ const BrandBox: NextPage<IProps> = ({ brands, modelItemHandler }) => {
                 Popular Brands
             </div>
             {brands?.map((brand) => (
-                <>
-                    <div
-                        className="compare-item-search-dropdown-item-title"
-                        key={brand._id}
-                    >
+                <Fragment key={brand._id}>
+                    <div className="compare-item-search-dropdown-item-title">
                         {brand.brandName}
                     </div>
                     <ul>
@@ -30,7 +28,7 @@ const BrandBox: NextPage<IProps> = ({ brands, modelItemHandler }) => {
                             </li>
                         ))}
                     </ul>
-                </>
+                </Fragment>
             ))}
         </div>
     );
