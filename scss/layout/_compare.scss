@@ -68,10 +68,22 @@
             z-index: 2600;
             top: 48px;
             left: 0;
-            padding: 10px;
             user-select: none;
 
+            &-variant-item {
+                font-size: 14px;
+                padding: 8px 10px;
+                margin-bottom: 3px;
+                cursor: pointer;
+
+                &:hover {
+                    background-color: #e9ecef;
+                }
+            }
+
             &-item {
+                padding: 10px;
+
                 &-title {
                     font-size: 14px;
                     font-weight: 600;

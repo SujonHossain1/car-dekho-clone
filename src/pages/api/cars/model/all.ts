@@ -1,14 +1,7 @@
-import { Types } from 'mongoose';
 import { NextApiRequest, NextApiResponse } from 'next';
-import { ICarBrand, ICarModel } from 'server/interface';
+import { IBrandItem, ICarBrand, ICarModel } from 'server/interface';
 import Brand from 'server/model/Brand';
 import Model from 'server/model/Model';
-
-interface IBrandItem {
-    brandName: string;
-    _id?: Types.ObjectId;
-    models: ICarModel[];
-}
 
 const allModelHandler = async (req: NextApiRequest, res: NextApiResponse) => {
     const { method } = req;
@@ -37,7 +30,7 @@ const allModelHandler = async (req: NextApiRequest, res: NextApiResponse) => {
         });
         res.json({
             success: true,
-            brandsWithModels,
+            data: brandsWithModels,
             message: 'ok',
         });
     }

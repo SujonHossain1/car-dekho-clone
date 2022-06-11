@@ -9,7 +9,6 @@ const carHandler = async (req: NextApiRequest, res: NextApiResponse) => {
 
     if (method === 'POST') {
         try {
-            console.log({ Yes: 'request worked' });
             const car = await Car.create(body);
             res.status(201).json({
                 success: true,

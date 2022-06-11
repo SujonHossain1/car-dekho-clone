@@ -1,26 +1,48 @@
 import axios from 'axios';
 import { GetServerSideProps, NextPage } from 'next';
 import { useState } from 'react';
-import { ICarBrand } from 'server/interface';
+import { IBrandItem, ICar, ICarModel } from 'server/interface';
+import SelectDropdown from 'src/components/SelectDropdown';
 
-interface IBrand {
+interface IBrands {
     success: boolean;
-    data: ICarBrand[],
-    message: string
+    data: IBrandItem[];
+    message: string;
+}
+interface IVariants {
+    success: boolean;
+    data: ICar[];
+    message: string;
 }
 interface IProps {
-    brands: ICarBrand[]
+    brands: IBrandItem[];
 }
+
+type ITab = 'brand' | 'variant';
 
 const CompareCar: NextPage<IProps> = ({ brands }) => {
     const [isDropdownOpen, setIsDropdownOpen] = useState(false);
-    const [tab, setTab] = useState('brand');
+    const [tab, setTab] = useState<ITab>('brand');
     const [search, setSearch] = useState('');
+    const [variants, setVariants] = useState<ICar[]>([]);
+    const [selectedCars, setSelectedCars] = useState<ICar[]>([]);
 
-    console.log({ brands });
+    const modelItemHandler = async (model: ICarModel) => {
+        console.log({ model: model._id });
+        setIsDropdownOpen(false);
+
+        const { data } = await axios.get<IVariants>(
+            `/api/cars/variant/${model._id}`
+        );
+        setIsDropdownOpen(true);
+        setVariants(data.data);
+        setTab('variant');
+    };
+    const variantItemHandler = (car: ICar) => {
+        console.log({ car });
+    };
     return (
         <div className="container bg-white py-5">
-            <pre> {JSON.stringify(brands, null, 4)} </pre>
             <div className="row">
                 <div className="col-md-3">
                     <div className="compare-item">
@@ -52,60 +74,31 @@ const CompareCar: NextPage<IProps> = ({ brands }) => {
                                     setSearch(e.currentTarget.value)
                                 }
                                 onFocus={() => setIsDropdownOpen(true)}
-                                onBlur={() => setIsDropdownOpen(false)}
+                                // onBlur={() => setIsDropdownOpen(false)}
                             />
                             {isDropdownOpen && (
-                                <div className="compare-item-search-dropdown">
-
-                                    <div
-                                        className="compare-item-search-dropdown-item"
-                                    >
-
-                                        <div className="compare-item-search-dropdown-item-title mb-3">
-                                            Popular Brands
-                                        </div>
-                                        {tab === "brand" && brands?.map((brand) => (
-                                            <>
-                                                <div className="compare-item-search-dropdown-item-title">
-                                                    {brand.brandName}
-                                                </div>
-
-                                                <ul>
-                                                    {/* {car.brand.model.map(
-                                                    (carModel) => (
-                                                        <li key={carModel.modelName} >
-                                                            {carModel.modelName}
-                                                        </li>
-                                                    )
-                                                )} */}
-                                                </ul>
-                                            </>
-                                        ))}
-                                    </div>
-
-                                    <div className="compare-item-search-dropdown-variant-item">
-
-                                    </div>
-                                </div>
+                                <SelectDropdown
+                                    tab={tab}
+                                    brands={brands}
+                                    variants={variants}
+                                    modelItemHandler={modelItemHandler}
+                                    variantItemHandler={variantItemHandler}
+                                />
                             )}
                         </div>
                     </div>
                 </div>
             </div>
-            {/* <pre>{JSON.stringify(data, null, 4)}</pre> */}
         </div>
     );
 };
 
 export const getServerSideProps: GetServerSideProps<IProps> = async (ctx) => {
     try {
-        const { data } = await axios.get<IBrand>(
-            `http://localhost:3000/api/cars/brand`
-        );
-
+        const { data } = await axios.get<IBrands>(`/api/cars/model/all`);
         return {
             props: {
-                brands: data.data
+                brands: data.data,
             },
         };
     } catch (error: any) {

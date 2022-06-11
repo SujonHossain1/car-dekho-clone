@@ -51,3 +51,9 @@ interface ICar {
         }
     ];
 }
+
+interface IBrandItem {
+    brandName: string;
+    _id?: Types.ObjectId;
+    models: ICarModel[];
+}
