@@ -1,22 +1,18 @@
-import { Types } from 'mongoose';
-interface ICarBrand {
-    _id?: Types.ObjectId;
+import { Document, Types } from 'mongoose';
+interface ICarBrand extends Document {
     brandName: string;
 }
-interface ICarModel {
-    _id?: Types.ObjectId;
+interface ICarModel extends Document {
     modelName: string;
     brand: Types.ObjectId;
 }
 
-interface IVariant {
-    _id?: Types.ObjectId;
+interface IVariant extends Document {
     variantName: string;
     model: Types.ObjectId;
 }
 
-interface ICar {
-    _id?: Types.ObjectId;
+interface ICar extends Document {
     brand: {
         _id?: Types.ObjectId;
         brandName: string;
@@ -52,8 +48,7 @@ interface ICar {
     ];
 }
 
-interface IBrandItem {
+interface IBrandItem extends Document {
     brandName: string;
-    _id?: Types.ObjectId;
     models: ICarModel[];
 }

@@ -1,7 +1,115 @@
+.compare-placeholder {
+    margin-top: 10px;
+    width: 300px;
+    height: 280px;
+    border: 1px solid #eee;
+    padding: 15px;
+    position: relative;
+
+
+
+    &-add {
+        height: 150px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+
+        &-icon {
+            font-size: 30px;
+            height: 65px;
+            width: 65px;
+            padding: 15px;
+            border: 1px dashed #b2aaaa;
+            border-radius: 50%;
+            color: #666;
+            margin-bottom: 8px;
+            cursor: pointer;
+        }
+
+        span {
+            font-size: 14px;
+            font-weight: 500;
+            color: #666;
+
+        }
+    }
+
+
+}
+
+.compare-placeholder-select {}
+
+.compare-placeholder-select-item {
+    position: relative;
+
+    &.disabled {
+        input[type="text"] {
+            &::placeholder {
+                color: rgb(182, 174, 174);
+            }
+        }
+
+        svg {
+            color: rgb(182, 174, 174);
+        }
+    }
+
+    input[type="text"] {
+        background: #fff;
+        border: 1px solid rgba(36, 39, 44, .3);
+        border-bottom: none;
+        -webkit-border-radius: 2px;
+        border-radius: 2px;
+        box-shadow: none;
+        font-size: 15px;
+        height: 48px;
+        padding: 0 30px 0 16px;
+        text-shadow: 0 0 0 #24272c;
+        width: 100%;
+
+        &:focus {
+            outline: none;
+        }
+
+        &::placeholder {
+            color: rgb(96, 94, 94);
+        }
+
+    }
+
+    .down {
+        position: absolute;
+        top: 50%;
+        right: 10px;
+        transform: translate(0, -50%);
+        color: rgb(96, 94, 94);
+    }
+
+    &:last-child {
+        input[type="text"] {
+            border-bottom: 1px solid rgba(36, 39, 44, .3);
+        }
+    }
+}
+
 .compare-item {
     padding: 15px;
-    box-shadow: 0 0 5px rgba(0, 0, 0, .1);
+    box-shadow: 0 0 5px rgb(0 0 0 / 10%);
     padding-bottom: 40px;
+    position: absolute;
+    top: 7px;
+    background: #fff;
+    width: 90%;
+    height: 90%;
+
+    .times {
+        text-align: right;
+        display: block;
+        margin-left: auto;
+        margin-bottom: 8px;
+        cursor: pointer;
+    }
 
     &-title {
         display: flex;
@@ -61,7 +169,7 @@
         &-dropdown {
             position: absolute;
             overflow: auto;
-            height: 260px;
+            height: 220px;
             width: 100%;
             background: #fff;
             box-shadow: 0 2px 8px 0 rgb(0 0 0 / 30%);

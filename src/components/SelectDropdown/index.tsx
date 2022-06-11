@@ -1,5 +1,7 @@
 import { NextPage } from 'next';
 import { IBrandItem, ICar, ICarModel } from 'server/interface';
+import BrandBox from '../BrandBox';
+import VariantBox from '../VariantBox';
 
 interface IProps {
     tab: 'brand' | 'variant';
@@ -19,43 +21,14 @@ const SelectDropdown: NextPage<IProps> = ({
     return (
         <div className="compare-item-search-dropdown">
             {tab === 'brand' && (
-                <div className="compare-item-search-dropdown-item">
-                    <div className="compare-item-search-dropdown-item-title mb-3">
-                        Popular Brands
-                    </div>
-                    {brands?.map((brand) => (
-                        <>
-                            <div
-                                className="compare-item-search-dropdown-item-title"
-                                key={brand._id}
-                            >
-                                {brand.brandName}
-                            </div>
-                            <ul>
-                                {brand.models.map((model) => (
-                                    <li
-                                        key={model._id}
-                                        onClick={() => modelItemHandler(model)}
-                                    >
-                                        {model.modelName}
-                                    </li>
-                                ))}
-                            </ul>
-                        </>
-                    ))}
-                </div>
+                <BrandBox brands={brands} modelItemHandler={modelItemHandler} />
             )}
-            {tab === 'variant' &&
-                variants.map((variantCar) => (
-                    <div
-                        className="compare-item-search-dropdown-variant-item"
-                        key={variantCar._id}
-                        onClick={() => variantItemHandler(variantCar)}
-                    >
-                        {variantCar.variant.variantName} ({variantCar.fuelType})
-                        ₹ {variantCar.price}
-                    </div>
-                ))}
+            {tab === 'variant' && (
+                <VariantBox
+                    variants={variants}
+                    variantItemHandler={variantItemHandler}
+                />
+            )}
         </div>
     );
 };
