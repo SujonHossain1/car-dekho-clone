@@ -50,10 +50,10 @@ const CompareCar: NextPage<IProps> = ({ brands }) => {
     };
 
     const showCardHandler = (bool: boolean) => {
-        console.log({ bool });
         setIsModalOpen(true);
         setShowCard(bool);
         setTab('brand');
+        setIsDropdownOpen(true);
     };
     return (
         <div className="container bg-white py-5">

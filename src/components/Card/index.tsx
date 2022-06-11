@@ -20,6 +20,7 @@ const Card: NextPage<Props> = ({
     showCardHandler,
 }) => {
     const [isDropdownOpen, setIsDropdownOpen] = useState(false);
+
     return (
         <div className="card-item">
             <div className="card-item-img">
@@ -51,7 +52,10 @@ const Card: NextPage<Props> = ({
                         <AiOutlineCaretDown className="down" />
                     </div>
                     {isDropdownOpen && (
-                        <div className="shadow-sm position-absolute bg-white w-100 ">
+                        <div
+                            className="shadow-sm position-absolute bg-white w-100 "
+                            onClick={() => setIsDropdownOpen(false)}
+                        >
                             <VariantBox
                                 variants={variants}
                                 variantItemHandler={variantItemHandler}
