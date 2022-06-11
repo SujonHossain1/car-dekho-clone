@@ -1,22 +1,22 @@
 import { Types } from 'mongoose';
 interface ICarBrand {
-    _id?: string;
+    _id?: Types.ObjectId;
     brandName: string;
 }
 interface ICarModel {
-    _id?: string;
+    _id?: Types.ObjectId;
     modelName: string;
     brand: Types.ObjectId;
 }
 
 interface IVariant {
-    _id?: string;
+    _id?: Types.ObjectId;
     variantName: string;
     model: Types.ObjectId;
 }
 
 interface ICar {
-    _id?: string;
+    _id?: Types.ObjectId;
     brand: {
         _id?: Types.ObjectId;
         brandName: string;

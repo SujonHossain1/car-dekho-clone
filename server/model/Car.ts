@@ -55,17 +55,5 @@ const carSchema = new Schema<ICar>(
     { timestamps: true }
 );
 
-// let Car: Model<ICar>;
-
-// try {
-//     Car = model<ICar>('car');
-//     console.log({ ok: 'schema if' });
-// } catch (error) {
-//     console.log({ ok: 'schema else' });
-//     Car = model<ICar>('car', carSchema);
-// }
-
 const Car = models.Car || model<ICar>('Car', carSchema);
-
-// const Car = models.Car ? models.Car : model<ICar>('car', carSchema);
 export default Car;

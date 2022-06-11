@@ -11,11 +11,5 @@ const brandSchema = new Schema<ICarBrand>(
     { timestamps: true }
 );
 
-// let Brand: Model<ICarBrand>;
-// try {
-//     Brand = model<ICarBrand>('brand');
-// } catch (error) {
-//     Brand = model<ICarBrand>('brand', brandSchema);
-// }
 const Brand = models.Brand || model<ICarBrand>('Brand', brandSchema);
 export default Brand;
