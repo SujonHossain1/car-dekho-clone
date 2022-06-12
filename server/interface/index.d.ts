@@ -48,7 +48,8 @@ interface ICar extends Document {
     ];
 }
 
-interface IBrandItem extends Document {
+interface IBrandItem {
     brandName: string;
     models: ICarModel[];
+    _id: string;
 }

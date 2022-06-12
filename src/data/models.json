@@ -1,0 +1,115 @@
+[{
+  "_id": {
+    "$oid": "62a3982c8be7f133fe44ae12"
+  },
+  "modelName": "Alto 800",
+  "brand": {
+    "$oid": "62a391408be7f133fe44ae0b"
+  },
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1654888492845"
+    }
+  },
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1654888492845"
+    }
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "62a3986a8be7f133fe44ae14"
+  },
+  "modelName": "Baleno",
+  "brand": {
+    "$oid": "62a391408be7f133fe44ae0b"
+  },
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1654888554951"
+    }
+  },
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1654888554951"
+    }
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "62a398798be7f133fe44ae16"
+  },
+  "modelName": "Celerio",
+  "brand": {
+    "$oid": "62a391408be7f133fe44ae0b"
+  },
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1654888569192"
+    }
+  },
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1654888569192"
+    }
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "62a398848be7f133fe44ae18"
+  },
+  "modelName": "Caiz",
+  "brand": {
+    "$oid": "62a391408be7f133fe44ae0b"
+  },
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1654888580121"
+    }
+  },
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1654888580121"
+    }
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "62a3989b8be7f133fe44ae1a"
+  },
+  "modelName": "Ertiga",
+  "brand": {
+    "$oid": "62a391408be7f133fe44ae0b"
+  },
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1654888603968"
+    }
+  },
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1654888603968"
+    }
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "62a398a58be7f133fe44ae1c"
+  },
+  "modelName": "S-Cross",
+  "brand": {
+    "$oid": "62a391408be7f133fe44ae0b"
+  },
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1654888613866"
+    }
+  },
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1654888613866"
+    }
+  },
+  "__v": 0
+}]

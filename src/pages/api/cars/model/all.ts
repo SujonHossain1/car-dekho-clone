@@ -33,6 +33,12 @@ const allModelHandler = async (req: NextApiRequest, res: NextApiResponse) => {
             data: brandsWithModels,
             message: 'ok',
         });
+    } else {
+        res.status(405).json({
+            success: false,
+            data: null,
+            message: 'Method not allowed',
+        });
     }
 };
 

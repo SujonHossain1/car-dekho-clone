@@ -39,7 +39,6 @@ const CompareItem: NextPage<IProps> = ({
 
     const modelItemHandler = async (model: ICarModel) => {
         setIsDropdownOpen(false);
-
         const { data } = await axios.get<IVariants>(
             `/api/cars/variant/${model._id}`
         );

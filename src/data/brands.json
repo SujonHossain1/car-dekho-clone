@@ -1,0 +1,49 @@
+[{
+  "_id": {
+    "$oid": "62a391408be7f133fe44ae0b"
+  },
+  "brandName": "Maruti",
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1654886720431"
+    }
+  },
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1654886720431"
+    }
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "62a392018be7f133fe44ae0d"
+  },
+  "brandName": "Hyundai",
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1654886913902"
+    }
+  },
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1654886913902"
+    }
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "62a392288be7f133fe44ae0f"
+  },
+  "brandName": "Honda",
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1654886952652"
+    }
+  },
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1654886952652"
+    }
+  },
+  "__v": 0
+}]

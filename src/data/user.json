@@ -1,0 +1,29 @@
+[{
+  "_id": {
+    "$oid": "62a0ff4359ac76db7f7ef54c"
+  },
+  "name": "John Doe",
+  "email": "john@doe.com",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "62a0ff4a59ac76db7f7ef54e"
+  },
+  "name": "John Doe",
+  "email": "john@doe.com",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "62a0ff4b59ac76db7f7ef550"
+  },
+  "name": "John Doe",
+  "email": "john@doe.com",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "62a0ff4d59ac76db7f7ef552"
+  },
+  "name": "John Doe",
+  "email": "john@doe.com",
+  "__v": 0
+}]

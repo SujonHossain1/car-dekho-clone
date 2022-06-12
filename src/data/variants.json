@@ -1,0 +1,115 @@
+[{
+  "_id": {
+    "$oid": "62a39ce78be7f133fe44ae22"
+  },
+  "variantName": "STD Opt",
+  "model": {
+    "$oid": "62a3982c8be7f133fe44ae12"
+  },
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1654889703567"
+    }
+  },
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1654889703567"
+    }
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "62a3a9ad0e9b9342b6998108"
+  },
+  "variantName": "LXI Opt",
+  "model": {
+    "$oid": "62a3982c8be7f133fe44ae12"
+  },
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1654892973130"
+    }
+  },
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1654892973130"
+    }
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "62a3ad2a36dcfead67704a55"
+  },
+  "variantName": "VXI",
+  "model": {
+    "$oid": "62a3982c8be7f133fe44ae12"
+  },
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1654893866875"
+    }
+  },
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1654893866875"
+    }
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "62a3aed2511a33f5ab47ec01"
+  },
+  "variantName": "VXI Plus",
+  "model": {
+    "$oid": "62a3982c8be7f133fe44ae12"
+  },
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1654894290541"
+    }
+  },
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1654894290541"
+    }
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "62a3b259511a33f5ab47ec05"
+  },
+  "variantName": "LXI Opt S-CNG",
+  "model": {
+    "$oid": "62a3982c8be7f133fe44ae12"
+  },
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1654895193486"
+    }
+  },
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1654895193486"
+    }
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "62a3b894511a33f5ab47ec11"
+  },
+  "variantName": "LXI Opt S-CNG",
+  "model": {
+    "$oid": "62a3982c8be7f133fe44ae12"
+  },
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1654896788467"
+    }
+  },
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1654896788467"
+    }
+  },
+  "__v": 0
+}]

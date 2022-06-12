@@ -1,0 +1,236 @@
+[{
+  "_id": {
+    "$oid": "62a3a8bb0e9b9342b6998105"
+  },
+  "brand": {
+    "_id": {
+      "$oid": "62a391408be7f133fe44ae0b"
+    },
+    "brandName": "Maruti"
+  },
+  "model": {
+    "_id": {
+      "$oid": "62a3982c8be7f133fe44ae12"
+    },
+    "modelName": "Alto 800"
+  },
+  "variant": {
+    "_id": {
+      "$oid": "62a39ce78be7f133fe44ae22"
+    },
+    "variantName": "STD Opt"
+  },
+  "serviceCost": {
+    "year": 5,
+    "price": 667
+  },
+  "price": 376784,
+  "year": 2021,
+  "engineType": "F8D Petrol Engine",
+  "displacement": 796,
+  "numberOfCylinder": 5,
+  "gearBox": "5 Speed",
+  "fuelType": "Petrol",
+  "kilometers": 32.1869,
+  "details": "The price of Maruti Alto 800 starts at Rs. 3.39 Lakh and goes upto Rs. 5.03 Lakh. Maruti Alto 800 is offered in 5 variants - the base model of Alto 800 is STD Opt and the top variant Maruti Alto 800 LXI Opt S-CNG which comes at a price tag of Rs. 5.03 Lakh.",
+  "photoUrl": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Maruti/Alto-800/7072/1650542631570/front-left-side-47.jpg?tr=w-456",
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1654892731801"
+    }
+  },
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1654892731801"
+    }
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "62a3ac6236dcfead67704a53"
+  },
+  "brand": {
+    "_id": {
+      "$oid": "62a391408be7f133fe44ae0b"
+    },
+    "brandName": "Maruti"
+  },
+  "model": {
+    "_id": {
+      "$oid": "62a3982c8be7f133fe44ae12"
+    },
+    "modelName": "Alto 800"
+  },
+  "variant": {
+    "_id": {
+      "$oid": "62a3a9ad0e9b9342b6998108"
+    },
+    "variantName": "LXI Opt"
+  },
+  "serviceCost": {
+    "year": 5,
+    "price": 667
+  },
+  "price": 452616,
+  "year": 2021,
+  "engineType": "F8D Petrol Engine",
+  "displacement": 796,
+  "numberOfCylinder": 6,
+  "gearBox": "5 Speed",
+  "fuelType": "Petrol",
+  "kilometers": 32.1869,
+  "details": "The price of Maruti Alto 800 starts at Rs. 3.39 Lakh and goes upto Rs. 5.03 Lakh. Maruti Alto 800 is offered in 5 variants - the base model of Alto 800 is STD Opt and the top variant Maruti Alto 800 LXI Opt S-CNG which comes at a price tag of Rs. 5.03 Lakh.",
+  "photoUrl": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Maruti/Alto-800/7072/1650542631570/front-left-side-47.jpg?tr=w-456",
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1654893666559"
+    }
+  },
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1654893666559"
+    }
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "62a3add8511a33f5ab47ebfe"
+  },
+  "brand": {
+    "_id": {
+      "$oid": "62a391408be7f133fe44ae0b"
+    },
+    "brandName": "Maruti"
+  },
+  "model": {
+    "_id": {
+      "$oid": "62a3982c8be7f133fe44ae12"
+    },
+    "modelName": "Alto 800"
+  },
+  "variant": {
+    "_id": {
+      "$oid": "62a3982c8be7f133fe44ae12"
+    },
+    "variantName": "VIX"
+  },
+  "serviceCost": {
+    "year": 5,
+    "price": 997
+  },
+  "price": 474018,
+  "year": 2022,
+  "engineType": "F8D Petrol Engine",
+  "displacement": 806,
+  "numberOfCylinder": 6,
+  "gearBox": "6 Speed",
+  "fuelType": "Petrol",
+  "kilometers": 39.1869,
+  "details": "The price of Maruti Alto 800 starts at Rs. 3.39 Lakh and goes upto Rs. 5.03 Lakh. Maruti Alto 800 is offered in 5 variants - the base model of Alto 800 is STD Opt and the top variant Maruti Alto 800 LXI Opt S-CNG which comes at a price tag of Rs. 5.03 Lakh.",
+  "photoUrl": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Maruti/Alto-800/7072/1650542631570/front-left-side-47.jpg?tr=w-456",
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1654894040608"
+    }
+  },
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1654894040608"
+    }
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "62a3b226511a33f5ab47ec03"
+  },
+  "brand": {
+    "_id": {
+      "$oid": "62a391408be7f133fe44ae0b"
+    },
+    "brandName": "Maruti"
+  },
+  "model": {
+    "_id": {
+      "$oid": "62a3982c8be7f133fe44ae12"
+    },
+    "modelName": "Alto 800"
+  },
+  "variant": {
+    "_id": {
+      "$oid": "62a3aed2511a33f5ab47ec01"
+    },
+    "variantName": "VXI Plus"
+  },
+  "serviceCost": {
+    "year": 5,
+    "price": 997
+  },
+  "price": 488461,
+  "year": 2022,
+  "engineType": "F8D Petrol Engine",
+  "displacement": 806,
+  "numberOfCylinder": 6,
+  "gearBox": "6 Speed",
+  "fuelType": "Petrol",
+  "kilometers": 39.1869,
+  "details": "The price of Maruti Alto 800 starts at Rs. 3.39 Lakh and goes upto Rs. 5.03 Lakh. Maruti Alto 800 is offered in 5 variants - the base model of Alto 800 is STD Opt and the top variant Maruti Alto 800 LXI Opt S-CNG which comes at a price tag of Rs. 5.03 Lakh.",
+  "photoUrl": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Maruti/Alto-800/7072/1650542631570/front-left-side-47.jpg?tr=w-456",
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1654895142462"
+    }
+  },
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1654895142462"
+    }
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "62a3b29b511a33f5ab47ec07"
+  },
+  "brand": {
+    "_id": {
+      "$oid": "62a391408be7f133fe44ae0b"
+    },
+    "brandName": "Maruti"
+  },
+  "model": {
+    "_id": {
+      "$oid": "62a3982c8be7f133fe44ae12"
+    },
+    "modelName": "Alto 800"
+  },
+  "variant": {
+    "_id": {
+      "$oid": "62a3b259511a33f5ab47ec05"
+    },
+    "variantName": "LXI Opt S-CNG"
+  },
+  "serviceCost": {
+    "year": 5,
+    "price": 997
+  },
+  "price": 555011,
+  "year": 2022,
+  "engineType": "F8D Petrol Engine",
+  "displacement": 806,
+  "numberOfCylinder": 6,
+  "gearBox": "6 Speed",
+  "fuelType": "CNG",
+  "kilometers": 40.1869,
+  "details": "The price of Maruti Alto 800 starts at Rs. 3.39 Lakh and goes upto Rs. 5.03 Lakh. Maruti Alto 800 is offered in 5 variants - the base model of Alto 800 is STD Opt and the top variant Maruti Alto 800 LXI Opt S-CNG which comes at a price tag of Rs. 5.03 Lakh.",
+  "photoUrl": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Maruti/Alto-800/7072/1650542631570/front-left-side-47.jpg?tr=w-456",
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1654895259596"
+    }
+  },
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1654895259596"
+    }
+  },
+  "__v": 0
+}]

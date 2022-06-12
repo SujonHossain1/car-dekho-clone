@@ -25,14 +25,18 @@ const ComparePage: NextPage<IProps> = ({ brands }) => {
     useEffect(() => {
         const data: ICar[] = [selectedData1, selectedData2, selectedData3];
         setSelectedAllData(data);
+        return () => {
+            setSelectedAllData([]);
+        };
     }, [selectedData1, selectedData2, selectedData3]);
 
     const compareHandler = () => {
-        const minimumSelected = selectedAllData.length > 1 ? true : false;
+        const isHasDataArray = selectedAllData.filter((item) => item._id);
+        const minimumSelected = isHasDataArray.length > 1 ? true : false;
         if (!minimumSelected) {
             alert('At least two cars need to compare');
         } else {
-            const variant1 = selectedData1.variant.variantName;
+            const variant1 = selectedData1.variant?.variantName;
             const variant2 = selectedData2.variant?.variantName;
             const variant3 = selectedData3.variant?.variantName;
 

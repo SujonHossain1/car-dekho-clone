@@ -39,6 +39,12 @@ const carHandler = async (req: NextApiRequest, res: NextApiResponse) => {
                 message,
             });
         }
+    } else {
+        res.status(405).json({
+            success: false,
+            data: null,
+            message: 'Method not allowed',
+        });
     }
 };
 
