@@ -1,4 +1,5 @@
 import { NextPage } from 'next';
+import { Fragment } from 'react';
 import { ICar } from 'server/interface';
 
 interface IProps {
@@ -9,16 +10,20 @@ interface IProps {
 const VariantBox: NextPage<IProps> = ({ variants, variantItemHandler }) => {
     return (
         <>
-            {variants.map((variantCar) => (
-                <div
-                    className="compare-item-search-dropdown-variant-item"
-                    key={variantCar._id}
-                    onClick={() => variantItemHandler(variantCar)}
-                >
-                    {variantCar.variant.variantName} ({variantCar.fuelType}) ₹{' '}
-                    {variantCar.price}
-                </div>
-            ))}
+            {variants.length > 0 &&
+                variants.map((variantCar, index) => (
+                    <Fragment key={variantCar._id + `${index}`}>
+                        {variantCar.variant && (
+                            <div
+                                className="compare-item-search-dropdown-variant-item"
+                                onClick={() => variantItemHandler(variantCar)}
+                            >
+                                {variantCar.variant?.variantName} (
+                                {variantCar?.fuelType}) ₹ {variantCar?.price}
+                            </div>
+                        )}
+                    </Fragment>
+                ))}
         </>
     );
 };

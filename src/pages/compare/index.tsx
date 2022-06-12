@@ -1,6 +1,7 @@
 import axios from 'axios';
 import { GetServerSideProps, NextPage } from 'next';
-import { useState } from 'react';
+import { useRouter } from 'next/router';
+import { useEffect, useState } from 'react';
 import { IBrandItem, ICar } from 'server/interface';
 import CompareItem from 'src/components/CompareItem';
 
@@ -9,56 +10,58 @@ interface IBrands {
     data: IBrandItem[];
     message: string;
 }
-interface IVariants {
-    success: boolean;
-    data: ICar[];
-    message: string;
-}
 interface IProps {
     brands: IBrandItem[];
 }
 
-const CompareCar: NextPage<IProps> = ({ brands }) => {
-    const [selectedData, setSelectedData] = useState<ICar[]>([]);
+const ComparePage: NextPage<IProps> = ({ brands }) => {
+    const router = useRouter();
+    const [selectedAllData, setSelectedAllData] = useState<ICar[]>([]);
 
-    const selectedDataHandler = (car: ICar) => {
-        const isExited = selectedData.find(
-            (carItem) => carItem._id === car._id
-        );
-        if (isExited) {
-            alert('Already Selected!');
-        } else {
-            setSelectedData((prev) => [...prev, car]);
-        }
-    };
+    const [selectedData1, setSelectedData1] = useState<ICar>({} as ICar);
+    const [selectedData2, setSelectedData2] = useState<ICar>({} as ICar);
+    const [selectedData3, setSelectedData3] = useState<ICar>({} as ICar);
+
+    useEffect(() => {
+        const data: ICar[] = [selectedData1, selectedData2, selectedData3];
+        setSelectedAllData(data);
+    }, [selectedData1, selectedData2, selectedData3]);
 
     const compareHandler = () => {
-        const minimumSelected = selectedData.length > 1 ? true : false;
+        const minimumSelected = selectedAllData.length > 1 ? true : false;
         if (!minimumSelected) {
             alert('At least two cars need to compare');
         } else {
-            console.log({ yes: 'oK' });
+            const variant1 = selectedData1.variant.variantName;
+            const variant2 = selectedData2.variant?.variantName;
+            const variant3 = selectedData3.variant?.variantName;
+
+            console.log({ variant1, variant2, variant3 });
+            router.push(
+                `/compare/details?variant=${variant1}&variant=${variant2}${
+                    variant3 ? `&variant=${variant3}` : ''
+                }`
+            );
         }
     };
-    const isDisable = selectedData.length > 1 ? true : false;
-    console.log({ isDisable });
+
     return (
         <div className="container bg-white py-5">
             <div className="row justify-content-center pb-5">
                 <CompareItem
                     brands={brands}
-                    selectedData={selectedData}
-                    selectedDataHandler={selectedDataHandler}
+                    selectedData={selectedAllData}
+                    setSelectedData={setSelectedData1}
                 />
                 <CompareItem
                     brands={brands}
-                    selectedData={selectedData}
-                    selectedDataHandler={selectedDataHandler}
+                    selectedData={selectedAllData}
+                    setSelectedData={setSelectedData2}
                 />
                 <CompareItem
                     brands={brands}
-                    selectedData={selectedData}
-                    selectedDataHandler={selectedDataHandler}
+                    selectedData={selectedAllData}
+                    setSelectedData={setSelectedData3}
                 />
             </div>
             <div className="text-center">
@@ -70,7 +73,7 @@ const CompareCar: NextPage<IProps> = ({ brands }) => {
     );
 };
 
-export const getServerSideProps: GetServerSideProps<IProps> = async (ctx) => {
+export const getServerSideProps: GetServerSideProps<IProps> = async () => {
     try {
         const { data } = await axios.get<IBrands>(`/api/cars/model/all`);
         return {
@@ -88,4 +91,4 @@ export const getServerSideProps: GetServerSideProps<IProps> = async (ctx) => {
     }
 };
 
-export default CompareCar;
+export default ComparePage;

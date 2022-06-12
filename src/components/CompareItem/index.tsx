@@ -15,14 +15,16 @@ interface IVariants {
 interface IProps {
     brands: IBrandItem[];
     selectedData: ICar[];
-    selectedDataHandler: (car: ICar) => void;
+    setSelectedData: (car: ICar) => void;
 }
 
 type ITab = 'brand' | 'variant';
 
-const CompareItem: NextPage<IProps> = (Props) => {
-    const { brands, selectedData, selectedDataHandler } = Props;
-
+const CompareItem: NextPage<IProps> = ({
+    brands,
+    selectedData,
+    setSelectedData,
+}) => {
     const [isDropdownOpen, setIsDropdownOpen] = useState(false);
     const [isModalOpen, setIsModalOpen] = useState(false);
     const [tab, setTab] = useState<ITab>('brand');
@@ -41,12 +43,12 @@ const CompareItem: NextPage<IProps> = (Props) => {
         const { data } = await axios.get<IVariants>(
             `/api/cars/variant/${model._id}`
         );
-        const carsData = data.data;
+        const variantData = data.data;
         const removeDuplicateData: ICar[] = [
             ...selectedData.filter((obj1) =>
-                carsData.every((obj2) => obj1._id !== obj2._id)
+                variantData.every((obj2) => obj1._id !== obj2._id)
             ),
-            ...carsData.filter((obj2) =>
+            ...variantData.filter((obj2) =>
                 selectedData.every((obj1) => obj2._id !== obj1._id)
             ),
         ];
@@ -56,7 +58,7 @@ const CompareItem: NextPage<IProps> = (Props) => {
     };
     const variantItemHandler = (car: ICar) => {
         setSelectedCar(car);
-        selectedDataHandler(car);
+        setSelectedData(car);
         setIsModalOpen(false);
         setIsDropdownOpen(false);
         setShowCard(true);
